@@ -1,16 +1,19 @@
 import React from "react";
 
-const List = () => {
+const List = ({personel}) => {
   return (
     <>
-      <article className="person">
-        <img src={"image"} alt={"name"} />
-        <div>
-          <h4>{"name"}</h4>
-          <p>{"email"}</p>
-          <p>{"age"} years</p>
-        </div>
-      </article>
+        {
+          personel.map((item)=>(
+          <article key={item.id} className="person">
+          <img src={item.image}   alt="" />
+          <div>
+            <h4>{item.name}</h4>
+            <p>{item.email}</p>
+            <p>{item.age}years</p>
+          </div></article>
+          ))
+        }     
     </>
   );
 };

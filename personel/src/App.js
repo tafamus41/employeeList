@@ -1,5 +1,6 @@
 import React from 'react';
 import List from './components/List';
+import data from "./helper/data"
 
 function App() {
  
@@ -10,7 +11,7 @@ function App() {
         <h5>
           (Employees 1 to 5)
         </h5>
-        <List />
+        <List personel={data} />
         <div className='btns'>
           <button >Prev</button>
           <button >Next</button>
